@@ -1,0 +1,10 @@
+# IntelliJ IDEA
+.idea/
+
+# Dependencies
+node_modules/
+bower_components/
+src/vendor/
+
+# Build
+build/

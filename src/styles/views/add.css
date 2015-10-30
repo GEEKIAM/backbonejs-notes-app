@@ -1,0 +1,35 @@
+.app-view-add {}
+
+/* Adaptive design */
+.app-view-add {}
+  .app-view-add .add-view-open {
+    display: none;
+  }
+
+@media screen and (max-width: 48em) {
+  .app-view-add {}
+    .app-view-add .add-view-open {
+      display: inline-block;
+      position: fixed;
+      right: 50%;
+      bottom: 30px;
+
+      transform: translateX(50%);
+    }
+    .app-view-add.app-view .app-view-content {
+      display: none;
+    }
+    .app-view-add.app-view .app-view-fader {
+      display: none;
+    }
+
+  /* if user click on .add-view-open */
+  .app-view-add.__active {}
+    .app-view-add.__active .app-view-content {
+      display: block;
+    }
+    .app-view-add.__active .app-view-fader {
+      display: block;
+    }
+}
+

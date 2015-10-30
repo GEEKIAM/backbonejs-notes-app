@@ -1,0 +1,73 @@
+{
+  "name": "backbonejs-notes-app",
+  "authors": [
+    "Anton Fedulov <afedulov.geekiam@gmail.com>"
+  ],
+  "description": "Very simple notes app builded with Backbone.js, Require.js, Pure.css",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.3",
+    "backbone.localStorage": "~1.1.16",
+    "requirejs": "~2.1.20",
+    "pure": "~0.6.0",
+    "font-awesome": "~4.4.0",
+    "marked": "~0.3.5",
+    "highlightjs": "~8.8.0"
+  },
+  "install": {
+    "base": "src/vendor",
+    "path": {
+      "css": "styles",
+      "js": "scripts",
+      "/(?:eot|svg|ttf|woff|woff2)$/": "fonts"
+    },
+    "sources": {
+      "pure": [
+        "bower_components/pure/pure.css",
+        "bower_components/pure/grids-responsive.css"
+      ],
+      "font-awesome": {
+        "mapping": [
+          {
+            "bower_components/font-awesome/css/font-awesome.css": "../font-awesome.css"
+          },
+          {
+            "bower_components/font-awesome/fonts/fontawesome-webfont.eot": "../fontawesome-webfont.eot"
+          },
+          {
+            "bower_components/font-awesome/fonts/fontawesome-webfont.svg": "../fontawesome-webfont.svg"
+          },
+          {
+            "bower_components/font-awesome/fonts/fontawesome-webfont.ttf": "../fontawesome-webfont.ttf"
+          },
+          {
+            "bower_components/font-awesome/fonts/fontawesome-webfont.woff": "../fontawesome-webfont.woff"
+          },
+          {
+            "bower_components/font-awesome/fonts/fontawesome-webfont.woff2": "../fontawesome-webfont.woff2"
+          }
+        ]
+      },
+      "highlightjs": {
+        "mapping": [
+          {
+            "bower_components/highlightjs/highlight.pack.js": "highlight.js"
+          },
+          {
+            "bower_components/highlightjs/styles/github-gist.css": "highlight.css"
+          }
+        ]
+      }
+    }
+  }
+}

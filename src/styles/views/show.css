@@ -1,0 +1,7 @@
+.app-view-show {}
+  .app-view-show .bottom-controls {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid #ecf0f1;
+    padding: 20px 0;
+  }

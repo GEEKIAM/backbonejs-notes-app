@@ -1,0 +1,32 @@
+/* Button sizes */
+.button-xsmall {
+  font-size: 70%;
+}
+
+.button-small {
+  font-size: 85%;
+}
+
+.button-large {
+  font-size: 110%;
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
+
+/* Button helpers */
+.button-full-width {
+  width: 100%;
+}
+
+/* Button colors */
+.button-danger {
+  background-color: #d14436;
+  color: #ecf0f1;
+}
+
+.button-success {
+  background-color: #27ae60;
+  color: #ecf0f1;
+}

@@ -1,0 +1,57 @@
+.app-view-notes {}
+
+  .app-view-notes .notes-list {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+    /* Empty list informer */
+    .notes-list:empty:before {
+      content: '\f24a';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+
+      font: normal normal normal 100px/1 FontAwesome;
+      text-align: center;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      color: #ecf0f1;
+    }
+    .notes-list:empty:after {
+      content: 'Create your first note';
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 160px;
+      font-size: 30px;
+      text-align: center;
+      color: #ecf0f1;
+    }
+
+    /* Notes list item */
+    .notes-list .notes-item {
+      border-bottom: 1px solid #ecf0f1;
+      padding: 20px 0 30px;
+    }
+      .notes-list .notes-item:first-child {
+        padding-top: 10px;
+      }
+      .notes-list .notes-item > .note-title {
+        margin-top: 0;
+      }
+
+
+/* Adaptive design */
+@media screen and (max-width: 48em) {
+  .app-view-notes .notes-list {
+    margin-bottom: 100px;
+  }
+}

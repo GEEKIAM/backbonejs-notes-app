@@ -1,0 +1,5 @@
+.bottom-controls {}
+  .bottom-controls .control {}
+    .bottom-controls .control.control-pin-right {
+      float: right;
+    }

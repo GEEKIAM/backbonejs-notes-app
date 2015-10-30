@@ -1,0 +1,14 @@
+@import "../vendor/styles/font-awesome.css";
+@import "../vendor/styles/pure/pure.css";
+@import "../vendor/styles/pure/grids-responsive.css";
+@import "../vendor/styles/highlightjs/highlight.css";
+
+@import "scaffolding.css";
+@import "button.css";
+@import "form.css";
+@import "misc.css";
+
+@import "views/notes.css";
+@import "views/add.css";
+@import "views/show.css";
+@import "views/edit.css";

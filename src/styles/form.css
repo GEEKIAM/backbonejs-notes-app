@@ -1,0 +1,22 @@
+.app-form {}
+  .app-form textarea {
+    max-width: 100%;
+    height: 150px;
+    max-height: 400px;
+  }
+  .app-form input {}
+  .app-form a {
+    color: #bdc3c7;
+  }
+  .app-form a:hover {
+    color: #acb2b6;
+  }
+  .app-form .app-form-field {
+    margin: 10px 0;
+  }
+  .app-form .app-form-note {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: #bdc3c7;
+  }
