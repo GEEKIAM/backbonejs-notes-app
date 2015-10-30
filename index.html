@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Backbone.js Notes App</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+
+<div class="app-container">
+  <header class="app-header">
+    <h1 class="header-title">
+      <a href="#">Notes App</a>
+    </h1>
+
+    <div class="header-subtitle">
+      Coded with
+      <i class="fa fa-heart"></i> and
+      <a href="http://backbonejs.org" target="_blank">Backbone.js</a>,
+      <a href="http://requirejs.org" target="_blank">Require.js</a>,
+      <a href="http://purecss.io" target="_blank">Pure.css</a>
+    </div>
+
+    <div class="header-links">
+      <a href="https://github.com/GEEKIAM/backbonejs-notes-app" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+    </div>
+  </header>
+
+  <main class="pure-g app-body" id="app">
+    <section class="pure-u-1 pure-u-md-11-24 app-primary-viewspace" id="app-primary-viewspace"></section>
+    <section class="pure-u-1 pure-u-md-13-24 app-secondary-viewspace" id="app-secondary-viewspace"></section>
+  </main>
+
+</div>
+
+
+<!-- List of notes template (notes.view.js) -->
+<script type="text/template" id="notes-view-template">
+  <h2>Notes</h2>
+
+  <ul class="notes-list" id="notes-list"></ul>
+</script>
+
+
+<!-- Single note template (note.view.js) -->
+<script type="text/template" id="note-view-template">
+  <h4 class="note-title" id="note-view-title"><%= note.title %></h4>
+
+  <div class="bottom-controls">
+    <a href="#note/<%= note.id %>/show" class="pure-button button-small pure-button-primary control">Open note</a>
+    <a id="note-view-delete" class="pure-button button-small button-danger control control-pin-right">
+      <i class="fa fa-trash-o"></i>
+    </a>
+  </div>
+</script>
+
+
+<!-- Create new note template (add.view.js) -->
+<script type="text/template" id="add-view-template">
+  <div id="add-view-open" class="pure-button button-large button-success add-view-open">
+    <i class="fa fa-plus fa-lg"></i>
+    Create new note
+  </div>
+
+  <div class="app-view-content">
+    <h2>Create new</h2>
+
+    <form class="pure-form app-form">
+      <input class="pure-input-1 app-form-field" id="add-view-title" type="text" placeholder="Title">
+      <textarea class="pure-input-1 app-form-field" id="add-view-content" placeholder="Content"></textarea>
+      <i class="app-form-note">
+        Tip: use
+        <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">markdown</a>
+        in content
+      </i>
+      <input class="pure-button button-success pure-input-1 app-form-field" id="add-view-submit" type="submit" value="Create">
+    </form>
+
+    <div id="add-view-close" class="pure-button button-full-width app-view-close">Cancel</div>
+  </div>
+
+  <div class="app-view-fader"></div>
+</script>
+
+
+<!-- Edit note template (edit.view.js) -->
+<script type="text/template" id="edit-view-template">
+  <div class="app-view-content">
+    <h2>Edit note</h2>
+
+    <form class="pure-form app-form">
+      <input class="pure-input-1 app-form-field" id="edit-view-title" type="text" placeholder="Title" value="<%= note.title %>">
+      <textarea class="pure-input-1 app-form-field" id="edit-view-content" placeholder="Content"><%= note.content %></textarea>
+      <i class="app-form-note">
+        Tip: use
+        <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">markdown</a>
+        in content
+      </i>
+      <input class="pure-button button-success pure-input-1 app-form-field" id="edit-view-submit" type="submit" value="Save">
+    </form>
+
+    <div id="edit-view-cancel" class="pure-button button-full-width app-view-close">Cancel</div>
+  </div>
+
+  <div class="app-view-fader"></div>
+</script>
+
+
+<!-- Show note template (show.view.js) -->
+<script type="text/template" id="show-view-template">
+  <div class="app-view-content">
+    <h3 id="note-title"><%= note.title %></h3>
+    <div id="note-content"><%= note.content %></div>
+
+    <div class="bottom-controls">
+      <a href="#note/<%= note.id %>/edit" class="pure-button button-small control">
+        <i class="fa fa-pencil"></i>
+        Edit
+      </a>
+      <a href="#" class="pure-button button-small control">
+        <i class="fa fa-close"></i>
+        Close
+      </a>
+
+      <a id="show-view-delete" class="pure-button button-small button-danger control control-pin-right">
+        <i class="fa fa-trash-o"></i>
+        Delete
+      </a>
+    </div>
+  </div>
+
+  <div class="app-view-fader"></div>
+</script>
+
+
+<script data-main="scripts/main" src="vendor/scripts/requirejs/require.js"></script>
+</body>
+</html>
